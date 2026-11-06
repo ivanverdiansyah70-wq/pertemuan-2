@@ -1,0 +1,351 @@
+/* ===== Modul 3A - CSS Dasar ===== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222222;
+}
+
+header {
+    background-color: #dbe7f6;
+    padding: 24px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    background-color: #ffffff;
+    padding: 14px;
+    border-bottom: 1px solid #cccccc;
+    text-align: center;
+}
+
+nav a {
+    color: #1f4e79;
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 24px auto;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 18px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+
+img {
+    max-width: 160px;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+th,
+td {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #eef3f8;
+}
+
+footer {
+    background-color: #dbe7f6;
+    padding: 16px;
+    text-align: center;
+    margin-top: 24px;
+}
+
+/* ===== Modul 3A - Layout Lab (card + sidebar) ===== */
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 16px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+
+.page-layout {
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 24px auto;
+    align-items: flex-start;
+}
+
+.side-nav {
+    width: 220px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.side-nav a {
+    display: block;
+    padding: 10px;
+    margin: 0;
+}
+
+.page-layout main {
+    flex: 1;
+    width: auto;
+    margin: 0;
+}
+
+.page-layout.right {
+    flex-direction: row-reverse;
+}
+
+/* ===== Modul 3B - Tabel Data Mahasiswa ===== */
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    background-color: white;
+}
+
+.data-table caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Level 2: padding, border, dan alignment diubah */
+.data-table th,
+.data-table td {
+    border: 1px solid #d0d7de;
+    padding: 12px 14px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #eeeeee;
+}
+
+.data-table .col-center {
+    text-align: center;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #fafbfc;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f7f7f7;
+}
+
+.data-table .empty-row {
+    text-align: center;
+    color: #666666;
+}
+
+/* Level 3: filter dan urutan data */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    margin-top: 8px;
+}
+
+.filter-bar a {
+    color: #1f4e79;
+    margin-left: 8px;
+}
+
+.filter-bar a.active {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* ===== Modul 5B - Login ===== */
+
+* { box-sizing: border-box; }
+
+.auth-page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 32px;
+    border: 1px solid #d1d5db;
+    border-radius: 16px;
+    background: #ffffff;
+}
+
+.form-group { margin-bottom: 18px; }
+
+.login-card label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+.login-card button {
+    width: 100%;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.message {
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    margin-bottom: 16px;
+}
+
+/* Sesi 9 - validasi form */
+.form-error { color: #b91c1c; font-size: 0.85rem; min-height: 1.1em; display: block; }
+.student-form input.is-invalid { border-color: #b91c1c; background: #fef2f2; }
+.alert-error { background: #fef2f2; color: #b91c1c; border: 1px solid #b91c1c; padding: 10px 14px; border-radius: 6px; margin-bottom: 12px; }
+.alert-success { background: #f0fdf4; color: #166534; border: 1px solid #166534; padding: 10px 14px; border-radius: 6px; margin-bottom: 12px; }
+
+/* ===== Sesi 10 - CRUD Media ===== */
+
+.crud-form input.is-invalid { border-color: #b91c1c; background: #fef2f2; }
+
+.crud-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    background: #1f4e79;
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-delete {
+    padding: 6px 10px;
+    border: 0;
+    border-radius: 6px;
+    background: #b91c1c;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.actions { white-space: nowrap; }
+.actions form { display: inline; }
+
+.crud-form label,
+.student-form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 700;
+}
+
+.crud-form input[type="text"],
+.crud-form input[type="email"],
+.crud-form input[type="number"],
+.student-form input[type="text"],
+.student-form input[type="email"],
+.student-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+.crud-form button[type="submit"],
+.student-form button[type="submit"] {
+    margin-top: 16px;
+    margin-right: 10px;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 8px;
+    background: #1f4e79;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+.table-photo {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.table-audio {
+    width: 210px;
+}
+
+.media-preview-box {
+    margin: 10px 0 18px;
+    padding: 12px;
+    border: 1px dashed #999;
+    border-radius: 8px;
+}
+
+.media-preview-image {
+    display: block;
+    width: 180px;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.media-preview-audio {
+    display: block;
+    width: min(100%, 420px);
+    margin-top: 8px;
+}
+
+.current-media {
+    margin: 8px 0 14px;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.file-hint {
+    display: block;
+    margin-top: 4px;
+    color: #666;
+    font-size: 0.9rem;
+}
